@@ -135,6 +135,101 @@ class Patterns {
         }
     }
 
+    static void alphaRightTriangle(int lines) {
+        char ch = 'A';
+        for (int i = 0; i <= lines; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print((char)(ch + j));
+            }
+            System.out.println();
+        }
+    }
+
+    static void alphaReverseTriangle(int lines) {
+        char ch = 'A';
+        for (int i = lines; i >= 0; i--) {
+            for (int j = 0; j < i; j++) {
+                System.out.print((char)(ch + j));
+            }
+            System.out.println();
+        }
+    }
+
+    static void alphaSimliarRowRightTriangle(int lines) {
+        char ch = 'A';
+        for (int i = 0; i <= lines; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print((char)(ch + i));
+            }
+            System.out.println();
+        }
+    }
+
+    static void wierdFullTriangle(int lines) {
+        for (int i = 1; i < lines; i++) {
+            // spaces
+            for (int j = 0; j < lines - i; j++) {
+                System.out.print("-");
+            }
+
+            char ch = 'A';
+
+            for (int j = 0; j < i; j++) {
+                System.out.print((char) (ch + j));
+            }
+
+            for (int j = i - 2; j >= 0; j--) {
+                System.out.print((char) (ch + j));
+            }
+
+            System.out.println();
+        }
+    }
+
+    static void similarRightTriangle(int lines) {
+        char ch='E';
+        for (int i = 0; i < lines; i++) {
+            for (int j = i; j >= 0; j--) {
+                System.out.print((char) (ch - j));
+            }
+            System.out.println();
+        }
+    }
+
+    static void allSquare(int lines) {
+        for (int i = 0; i < lines; i++) {
+            if (i == 0 || i == lines - 1) {
+                for (int j = 0; j < lines; j++) {
+                    System.out.print("*");
+                }
+            } else {
+                for (int j = 0; j < lines; j++) {
+                    if(j==0 || j == lines-1) {
+                        System.out.print("*");
+                    }else{
+                        System.out.print(" ");
+                    }
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    static void allWierdSquare(int lines) {
+        int count = lines - 3;
+        for (int i = 0; i < lines; i++) {
+            for( int j=0; j< lines; j++){
+                if(i==0 || i == lines-1 || j == 0 || j == lines -1){
+                    System.out.print(count);
+                }else{
+                    System.out.print(count - i);
+                }
+            }
+
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         // ? p-1
         // simpleSquare();
@@ -174,7 +269,27 @@ class Patterns {
         // numericCastle(5);
 
         //? p-13
-        regularTriangle(5);
+        // regularTriangle(5);
 
+        //? p-14
+        // alphaRightTriangle(5);
+
+        //? p-15
+        // alphaReverseTriangle(5);
+
+        //? p-16
+        // alphaSimliarRowRightTriangle(5);
+
+        //? p-17
+        // wierdFullTriangle(5);
+
+        //? p-18
+        // similarRightTriangle(5);
+
+        //? p-19
+        // allSquare(5);
+
+        //? p-20
+        allWierdSquare(7);
     }
 }
