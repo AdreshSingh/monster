@@ -230,6 +230,23 @@ class Patterns {
         }
     }
 
+    static void letDoIt(int lines) {
+        int limit = lines - 3;
+        for (int i = 0; i < limit; i++) {
+            int t=0;
+            for (int j = 0; j < limit; j++) {
+                if(j < t){
+                    System.out.print(limit - t);
+                    t++;
+                }
+                else {
+                    System.out.print(limit);
+                }
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         // ? p-1
         // simpleSquare();
@@ -289,7 +306,12 @@ class Patterns {
         //? p-19
         // allSquare(5);
 
-        //? p-20
-        allWierdSquare(7);
+        //? p-20 - will give hard time
+        // allWierdSquare(7);
+
+        // ? Ahaahhhhahhhha
+        letDoIt(7);
+
+
     }
 }
