@@ -1,0 +1,15 @@
+{
+  "mc_questions": [
+    {
+      "question": "hello coderbyte",
+      "answers": [
+        "I am correct",
+        "Wrong 2",
+        "Will be correct",
+        "Will be correct"
+      ],
+      "correctAnswers": ["2"],
+      "allRequired": true
+    }
+  ]
+}
